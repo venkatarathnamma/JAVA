@@ -1,0 +1,7 @@
+public class basics{
+    public static void main(String[]args){
+        String str="venku";
+        int len=str.length();
+        System.out.println(len);
+    }
+}
