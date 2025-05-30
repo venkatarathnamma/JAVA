@@ -1,0 +1,20 @@
+public class basics{
+    public static void main(String[]args){
+        String str="i am venkata rathnamma";
+        str=str.toLowerCase();
+        int len=str.length();
+        int vowels=0,consonants=0,i;
+        for(i=1;i<len;i++){
+            char c=str.charAt(i);
+            if(c>='a'&&c<='z'){
+                if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'){
+                    vowels++;
+                }else{
+                    consonants++;
+                }
+            }
+        }
+        System.out.println("no of vowels are: " + vowels);
+        System.out.println("no of consonants are: " + consonants);
+    }
+}
