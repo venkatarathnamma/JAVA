@@ -1,0 +1,11 @@
+import java.util.Scanner;
+public class string{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the string");
+        String s1=sc.nextLine();
+        String s2=s1.toUpperCase();
+        String s3=s1.toLowerCase();
+        System.out.println("uppercase is: "+s2);
+        System.out.println("lowercase is: "+s3);
+    }}
