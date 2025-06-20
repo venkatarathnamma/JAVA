@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class first{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter string: ");
+        String s=sc.nextLine();
+        String[] words=s.split(" ");
+        String longest="";
+        for(String w:words){
+            if(!w.isEmpty()){
+                System.out.println(w.charAt(0));
+            }
+        }
+    }
+}
