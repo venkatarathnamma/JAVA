@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class SortWordsByOrder {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of words: ");
+        int n = sc.nextInt();
+        sc.nextLine(); // consume newline
+
+        String[] words = new String[n];
+        System.out.println("Enter " + n + " words:");
+        for (int i = 0; i < n; i++) {
+            words[i] = sc.nextLine();
+        }
+
+        System.out.print("Order (A/D): ");
+        char order = sc.next().charAt(0);
+
+        Arrays.sort(words); // sort alphabetically (ascending)
+
+        if (order == 'D' || order == 'd') {
+            for (int i = words.length - 1; i >= 0; i--) {
+                System.out.println(words[i]);
+            }
+        } else {
+            for (String word : words) {
+                System.out.println(word);
+            }
+        }
+    }
+}
