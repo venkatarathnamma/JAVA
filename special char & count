@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class specialchar{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter string: ");
+        String s=sc.nextLine();
+        String special="";
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(!Character.isLetterOrDigit(c)&&!Character.isWhitespace(c)){
+                special+=c+" ";
+                count++;
+            }
+        }
+        System.out.println(special);
+        System.out.println(count);
+    }
+}
