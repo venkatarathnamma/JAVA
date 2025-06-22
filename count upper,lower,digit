@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class count{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter characters: ");
+        int upper=0,lower=0,digit=0;
+        char c;
+        while(true){
+            c=sc.next().charAt(0);
+            if(c=='*'){
+                break;
+            }
+            if(c>='A'&&c<='Z'){
+                upper++;
+            }else if(c>='a'&&c<='z'){
+                lower++;
+            }else{
+                digit++;
+            }
+        }
+        System.out.println("lower count " +lower);
+        System.out.println("upper count " +upper);
+        System.out.println("digit count " +digit);
+    }
+}
