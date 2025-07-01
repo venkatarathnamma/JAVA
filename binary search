@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class binars{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter number of elements: ");
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        System.out.print("enter array elements: ");
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        System.out.print("enter target elements: ");
+        int target=sc.nextInt();
+        int pos=-1;
+        int start=0;
+        int end=n-1;
+        int mid;
+        while(start<=end){
+            mid=(start+end)/2;
+            if(target==a[mid]){
+                pos=mid;
+                break;
+            }else if(target>a[mid]){
+                start=mid+1;
+            }else{
+                end=mid-1;
+            }
+        }
+        if(pos!=-1){
+            System.out.print("element found at index:"+pos);
+        }else{
+            System.out.print("element not found");
+        }
+    }
+}
