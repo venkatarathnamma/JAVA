@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class minmaxmatrx{
+public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    int a[][]=new int[3][3];
+    System.out.print("enter array of elements:");
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            a[i][j]=sc.nextInt();
+        }
+    }
+    int min=Integer.MAX_VALUE,max=Integer.MIN_VALUE;
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            if(a[i][j]>max){
+                max=a[i][j];
+            }
+            if(a[i][j]<min){
+                min=a[i][j];
+            }
+        }
+    }
+    System.out.print("max" +max+ "min " +min);
+}
+}
