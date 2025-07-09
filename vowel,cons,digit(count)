@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class string{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter string: ");
+        String s=sc.nextLine();
+        int vowels=0,consonants=0,digit=0;
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+        if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'){
+            vowels++;
+        }else if(c>='a'&&c<='z'){
+            consonants++;
+        }else if(c<='9'&&c>='0'){
+            digit++;
+        }
+        }
+        System.out.println("vowelcount "+ vowels);
+        System.out.println("consonant count "+consonants);
+        System.out.println("digits count"+digit);
+    }
+}
