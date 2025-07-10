@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class lenword{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter string: ");
+        String s=sc.nextLine();
+        String []words=s.split(" ");
+        int count=0;
+        for(String word:words){
+            if(!word.equals(" ")){
+                count++;
+            }
+        }
+        System.out.print("no of words are: "+count);
+    }}
