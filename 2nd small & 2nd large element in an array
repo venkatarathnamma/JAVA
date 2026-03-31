@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter number of elements: ");
+        int n=sc.nextInt();
+        System.out.print("enter array elements: ");
+        int a[]=new int[n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        int small=a[0], large=a[0];
+        for(int i=0;i<n;i++){
+            if(a[i]<small){
+                small=a[i];
+            }
+            if(a[i]>large){
+                large=a[i];
+            }
+        }
+        int secondsmall=Integer.MAX_VALUE;
+        int secondlarge=Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+            if(a[i]>small && a[i]<secondsmall){
+                secondsmall=a[i];
+            }
+            if(a[i]<large && a[i]>secondlarge){
+                secondlarge=a[i];
+            }
+        }
+        System.out.println("second small is "+secondsmall);
+        System.out.println("second large is "+secondlarge);
+    }
+}
