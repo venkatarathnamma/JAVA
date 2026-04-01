@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter number of elements: ");
+        int n=sc.nextInt();
+        System.out.print("enter array elements: ");
+        int a[]=new int[n];
+        int evencount=0;
+        int oddcount=0;
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++){
+            if(a[i]%2==0){
+                evencount++;
+            }else{
+                oddcount++;
+            }
+        }
+        System.out.println("evencount is: "+evencount);
+        System.out.println("oddcount is: "+oddcount);
+    }
+}
