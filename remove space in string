@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class Removespace{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter string: ");
+        String s=sc.nextLine();
+        String remove=s.replace(" ","");
+        System.out.print(remove);
+    }
+}
